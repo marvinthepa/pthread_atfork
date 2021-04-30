@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This demonstrates a bug that I ran into when using spring and stackprof while
+running tests.
 
-Things you may want to cover:
+To reproduce, run
 
-* Ruby version
+```
+bundle exec spring rails test test/models/article_test.rb
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+What should happen: the test process should terminate after the test is
+finished.
+What happens instead: the process hangs after the test is finished.
