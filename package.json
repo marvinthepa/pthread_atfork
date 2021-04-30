@@ -1,0 +1,5 @@
+{
+  "name": "pthread_atfork",
+  "private": true,
+  "dependencies": {}
+}
